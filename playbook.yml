@@ -1,0 +1,15 @@
+---
+- name: Gather version information from Cisco IOS XR devices
+  hosts: iosxr_devices
+  gather_facts: no
+  connection: network_cli
+  tasks:
+    - name: Run show version brief
+      iosxr_command:
+        commands:
+          - show version brief
+      register: show_version_output
+
+    - name: Display show version brief output
+      debug:
+        msg: "{{ show_version_output.stdout }}"
