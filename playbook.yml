@@ -7,7 +7,7 @@
     - name: Run show version brief
       iosxr_command:
         commands:
-          - show version brief
+          - show version
       register: show_version_output
 
     - name: Display show version brief output
