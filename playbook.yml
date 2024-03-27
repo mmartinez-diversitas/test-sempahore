@@ -1,6 +1,5 @@
 ---
 - name: Gather version information from Cisco IOS XR devices
-  hosts: GT-XR-UFINET
   gather_facts: no
   connection: network_cli
   tasks:
