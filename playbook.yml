@@ -1,15 +1,14 @@
 ---
-- name: Gather version information from Cisco IOS XR devices
-  gather_facts: no
+- name: Run show version command
   hosts: GT-XR-UFINET
-  connection: network_cli
+  gather_facts: no
   tasks:
-    - name: Run show version brief
+    - name: Run show version command
       ios_command:
         commands:
           - show version
-      register: show_version_output
+      register: version_output
 
-    - name: Display show version brief output
+    - name: Print show version output
       debug:
-        msg: "{{ show_version_output.stdout }}"
+        msg: "{{ version_output.stdout }}"
