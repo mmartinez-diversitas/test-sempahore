@@ -1,6 +1,6 @@
 ---
 - name: Run show version command
-  hosts: GT-XR-UFINET
+  hosts: GT-XE-UFINET
   gather_facts: no
   tasks:
     - name: Run show version command
