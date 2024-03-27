@@ -2,6 +2,7 @@
 - name: Run show version command
   hosts: GT_XE_UFINET
   gather_facts: no
+  get_capabilities: no
   tasks:
     - name: Run show version command
       ios_command:
