@@ -1,6 +1,8 @@
 ---
 - name: Run show version command
   hosts: GT_XE_UFINET
+  vars:
+    ansible_ssh_common_args: "-o KexAlgorithms=diffie-hellman-group14-sha1"
   gather_facts: no
   tasks:
     - name: Run show version command
